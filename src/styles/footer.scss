@@ -1,0 +1,112 @@
+.endpage {
+    .footer {
+        padding: 40px;
+        width: 100%;
+        margin-top: 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+        .left {
+            text-align: left;
+            width: 40%;
+            color: white;
+
+            .margin-up {
+                margin-top: 10px;
+            }
+
+            > div {
+                margin-left: 40%;
+            }
+
+            .title {
+                font-size: 36px;
+                font-weight: 700;
+            }
+            .information {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                width: 25%;
+            }
+        }
+
+        .right {
+            width: 35%;
+            display: grid;
+            grid-template-columns: 70% 30%;
+            color: white;
+
+            .margin-up {
+                margin-bottom: 15px;
+            }
+
+            .text {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 40px;
+            }
+        }
+    }
+
+    .copyright {
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        color: white;
+      }
+
+    @media only screen and (max-width: 768px) {
+        .footer {
+            margin-top: 75px;
+
+            .left {
+                > div {
+                    margin-left: 5%;
+                }
+
+                .title {
+                    font-size: 24px;
+                }
+            }
+
+            .right > .text {
+                font-size: 18px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 375px) {
+        .footer {
+            flex-direction: column;
+            margin-top: 75px;
+
+            .left {
+                text-align: center;
+                width: 100%;
+                margin-bottom: 50px;
+
+                .margin-up {
+                    width: 100%;
+                }
+
+                .title {
+                    font-size: 24px;
+                }
+            }
+
+            .right {
+                width: 100%;
+                grid-template-columns: 65% 35%;
+
+                .text {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,153 @@
+.popover_content {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    > div {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .header_text {
+        font-size: 22px;
+        font-weight: 500;
+        color: #0077b6;
+    }
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .radio_text {
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+
+    .selects {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .label {
+            margin-left: 15px;
+            font-size: 22px;
+            font-weight: 500;
+            color: #0077b6;
+        }
+    }
+}
+
+.header {
+    width: 1250px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5px solid;
+    margin: 0 auto;
+
+    // header_label: 20%
+
+    .social_icons {
+        width: 55%;
+
+        > .facebook-svg {
+            display: none;
+        }
+    }
+
+    .settings {
+        width: 15%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        border: none;
+        outline: none;
+        background-color: inherit;
+        cursor: pointer;
+    }
+
+    .newgame {
+        cursor: pointer;
+        display: none;
+    }
+
+    .menu {
+        cursor: pointer;
+        outline: none;
+        border: none;
+        background-color: inherit;
+
+        .phone_settings {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        width: 700px;
+
+        .social_icons {
+            width: 30%;
+        }
+
+        .settings {
+            width: 30%;
+            justify-content: flex-end;
+
+            > .icon {
+                width: 40%;
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 375px) {
+        width: 340px;
+
+        .social_icons {
+            display: none;
+        }
+
+        .settings {
+            display: none;
+        }
+        .menu {
+            display: inline;
+
+            > .phone_settings {
+                display: inline;
+            }
+        }
+
+        .newgame {
+            text-align: right;
+            width: 35%;
+            display: inline;
+            font-size: 18px;
+            font-weight: 700;
+            color: #f9ab55;
+        }
+
+        .popover_content {
+            .social_media {
+                width: 100%;
+                border-top: 1px solid;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+
+                > * {
+                    margin-top: 10px;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}

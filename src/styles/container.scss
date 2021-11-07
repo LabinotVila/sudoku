@@ -1,0 +1,268 @@
+.container {
+    width: 1050px;
+    min-width: 270px;
+    min-height: 85vh;
+    margin: 0 auto;
+
+    .how-to-play {
+        margin-top: 100px;
+    }
+
+    .innercontainer {
+        margin-top: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        color: var(--color-grey);
+        flex-wrap: wrap;
+
+        .left-content {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .gameinfo {
+                width: 100%;
+                height: 50px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .mistakes {
+                    width: 33.3%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+
+                    .number {
+                        font-size: 22px;
+                        font-weight: 500;
+                        color: #f9ab55;
+                    }
+                }
+
+                .difficulty {
+                    width: 33.3%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .select {
+                        cursor: pointer;
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
+                        appearance: none;
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: #f9ab55;
+                        background-color: var(--background-color);
+                        background-repeat: no-repeat;
+                        background-position: right 0.7em top 50%, 0 0;
+                        background-size: 0.5em auto, 100%;
+                        background-color: inherit;
+                    }
+                }
+
+                .time {
+                    width: 33.3%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    .icon {
+                        width: 25%;
+                    }
+
+                    .text {
+                        width: 35%;
+                        text-align: right;
+                    }
+                }
+            }
+
+            .game {
+                position: relative;
+                .big_play_button {
+                    z-index: 1;
+                    height: 250px;
+                    width: 250px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        .right-content {
+            width: 35%;
+            margin-top: 55px;
+
+            .new-game-button {
+                width: 100%;
+                height: 64px;
+                border-radius: 10px;
+                font-size: 24px;
+                font-weight: 600;
+                color: white;
+            }
+
+            .numbers {
+                line-height: 1.4em;
+                margin-top: 30px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .actions {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: center;
+                width: 100%;
+                margin-top: 25px;
+                display: flex;
+
+                .icon {
+                    width: 50px;
+                    height: 50px;
+                    cursor: pointer;
+                }
+
+                .undo-icon {
+                    padding: 5px;
+                }
+
+                .notes-icon {
+                    position: absolute;
+                    left: 47px;
+                    bottom: 18px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        width: 700px;
+
+        .innercontainer {
+            margin-top: 20px;
+            .left-content {
+                width: 57%;
+
+                .gameinfo > .time {
+                    .icon {
+                        width: 15%;
+                        height: 25px;
+                        width: 25px;
+                    }
+                    .text {
+                        width: 40%;
+                    }
+                }
+            }
+
+            .right-content {
+                width: 40%;
+                margin-top: 40px;
+
+                .new-game-button {
+                    height: 54px;
+                }
+                .actions {
+                    .icon {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    .notes-icon {
+                        width: 23px;
+                        height: 23px;
+                        position: absolute;
+                        left: 35px;
+                        bottom: 17px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .how-to-play {
+            margin-top: 75px;
+        }
+    }
+
+    @media only screen and (max-width: 375px) {
+        width: 340px;
+
+        .innercontainer {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            .left-content {
+                width: 100%;
+
+                .gameinfo {
+                    .difficulty {
+                        .select {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .time {
+                        justify-content: flex-end;
+
+                        .text {
+                            width: 50%;
+                        }
+
+                        .icon {
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+
+                    .mistakes > .number {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .right-content {
+                margin-top: 25px;
+                width: 100%;
+
+                .new-game-button {
+                    display: none;
+                }
+
+                .numbers {
+                    line-height: 2em;
+                    margin-top: 0;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                .actions {
+                    margin-top: 25px;
+                }
+            }
+        }
+
+        .how-to-play {
+            margin-top: 75px;
+        }
+    }
+}
