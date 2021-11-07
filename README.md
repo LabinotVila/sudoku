@@ -1,8 +1,5 @@
 # Sudoku
 
-#### Description
-Sudoku is a TypeScript React project which has been completed as an Upwork request. 
-
 #### Features
 Sudoku follows the same rules as real sudoku games. It is made of:
 
